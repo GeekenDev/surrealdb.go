@@ -14,15 +14,15 @@ import (
 	"github.com/surrealdb/surrealdb.go/pkg/logger/slog"
 	"github.com/surrealdb/surrealdb.go/pkg/model"
 
+	"github.com/geekendev/surrealdb.go"
+	"github.com/geekendev/surrealdb.go/pkg/conn/gorilla"
+	"github.com/geekendev/surrealdb.go/pkg/constants"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"github.com/surrealdb/surrealdb.go"
-	"github.com/surrealdb/surrealdb.go/pkg/conn/gorilla"
-	"github.com/surrealdb/surrealdb.go/pkg/constants"
 
-	"github.com/surrealdb/surrealdb.go/pkg/conn"
-	"github.com/surrealdb/surrealdb.go/pkg/logger"
-	"github.com/surrealdb/surrealdb.go/pkg/marshal"
+	"github.com/geekendev/surrealdb.go/pkg/conn"
+	"github.com/geekendev/surrealdb.go/pkg/logger"
+	"github.com/geekendev/surrealdb.go/pkg/marshal"
 )
 
 // TestDBSuite is a test s for the DB struct
