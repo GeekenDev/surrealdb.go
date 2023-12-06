@@ -1,19 +1,19 @@
 # Contributing
 
-We would &nbsp;<img width="15" alt="Love" src="https://github.com/surrealdb/surrealdb/blob/main/img/love.svg?raw=true">&nbsp; for you to contribute to SurrealDB and help make it better! We want to ensure contributing to SurrealDB is fun, enjoyable, and educational for anyone and everyone. All contributions are welcome, including features, bug fixes, and documentation changes, as well as updates and tweaks, blog posts, workshops, and everything else.
+We would &nbsp;<img width="15" alt="Love" src="https://github.com/geekendev/surrealdb/blob/main/img/love.svg?raw=true">&nbsp; for you to contribute to SurrealDB and help make it better! We want to ensure contributing to SurrealDB is fun, enjoyable, and educational for anyone and everyone. All contributions are welcome, including features, bug fixes, and documentation changes, as well as updates and tweaks, blog posts, workshops, and everything else.
 
 ## How to start
 
-If you are worried or don’t know where to start, check out our next section explaining what kind of help we could use and where can you get involved. You can ask us a question on [GitHub Discussions](https://github.com/surrealdb/surrealdb/discussions), or the [SurrealDB Discord Server](https://surrealdb.com/discord). Alternatively, you can message us on any channel in the [SurrealDB Community](https://surrealdb.com/community)!
+If you are worried or don’t know where to start, check out our next section explaining what kind of help we could use and where can you get involved. You can ask us a question on [GitHub Discussions](https://github.com/geekendev/surrealdb/discussions), or the [SurrealDB Discord Server](https://surrealdb.com/discord). Alternatively, you can message us on any channel in the [SurrealDB Community](https://surrealdb.com/community)!
 
 ## Code of conduct
 
 Please help us keep SurrealDB open and inclusive. Kindly read and follow our [Code of Conduct](/CODE_OF_CONDUCT.md).
 
-<!--
---------------------------------------------------
-ONLY RELEVANT FOR CLIENT SDK REPOSITORIES
---------------------------------------------------
+## <!--
+
+## ONLY RELEVANT FOR CLIENT SDK REPOSITORIES
+
 -->
 
 ## Coding standards
@@ -23,26 +23,26 @@ We aim to develop according to coding standards in-line with each programming la
 <details>
   <summary>Prerequisite Reading</summary>
 
-  ## What is a Database Driver?
-  
-  A database driver (also known as a client library), is a module for a programming language that is implemented to provide access to SurrealDB, and enables access to the wide range of functionality the database offers.
-  
-  Its focus is primarily on network protocol correctness, performance, access to distinct database features, error handling, and in due course, transaction handling and retriability.
-  
-  Drivers are not designed to be a one-size-fits-all, as we cannot make assumptions about how users will use the drivers. JDBC? Async? ORM? DSL? Due to the many different features and functionalities in each language, we are unable to provide all this functionality in a single driver.
-  
-  We want users to have very clear expectations about how our software works. It’s very important for us that when users move between languages or compare implementations, the SurrealDB integration is as familiar as possible across all languages.
-  
-  ## Driver architecture
-  
-  We would recommend following the API of the [Rust driver](https://github.com/surrealdb/surrealdb/tree/main/lib), as the Rust driver is fully utilising our capabilities and is the de-facto reference implementation. In the future, it will also be the underlying implementation as we begin to share a common API (either via foreign function interfaces or WASM), with native language-specific bindings.
-  
-  Drivers connect to SurrealDB using either REST, a text-based WebSocket protocol, or a binary-based WebSocket protocol. Each of the protocols aims to support as many of the SurrealDB features as possible, ensuring that similar functionality and similar performance are supported regardless of the protocol being used.
-  
-  Beyond baseline protocol support, error handling is also a key feature. This is tied with both custom SurrealQL protocol status codes included in the response itself, or with HTTP status codes in some cases.
-  
-  There isn't any specific configuration per driver. We may introduce configuration options in due course, and we will update this guide if we change those configurations.
-  
+## What is a Database Driver?
+
+A database driver (also known as a client library), is a module for a programming language that is implemented to provide access to SurrealDB, and enables access to the wide range of functionality the database offers.
+
+Its focus is primarily on network protocol correctness, performance, access to distinct database features, error handling, and in due course, transaction handling and retriability.
+
+Drivers are not designed to be a one-size-fits-all, as we cannot make assumptions about how users will use the drivers. JDBC? Async? ORM? DSL? Due to the many different features and functionalities in each language, we are unable to provide all this functionality in a single driver.
+
+We want users to have very clear expectations about how our software works. It’s very important for us that when users move between languages or compare implementations, the SurrealDB integration is as familiar as possible across all languages.
+
+## Driver architecture
+
+We would recommend following the API of the [Rust driver](https://github.com/geekendev/surrealdb/tree/main/lib), as the Rust driver is fully utilising our capabilities and is the de-facto reference implementation. In the future, it will also be the underlying implementation as we begin to share a common API (either via foreign function interfaces or WASM), with native language-specific bindings.
+
+Drivers connect to SurrealDB using either REST, a text-based WebSocket protocol, or a binary-based WebSocket protocol. Each of the protocols aims to support as many of the SurrealDB features as possible, ensuring that similar functionality and similar performance are supported regardless of the protocol being used.
+
+Beyond baseline protocol support, error handling is also a key feature. This is tied with both custom SurrealQL protocol status codes included in the response itself, or with HTTP status codes in some cases.
+
+There isn't any specific configuration per driver. We may introduce configuration options in due course, and we will update this guide if we change those configurations.
+
   <!--
   --------------------------------------------------
   END
@@ -52,58 +52,59 @@ We aim to develop according to coding standards in-line with each programming la
 
 ## Introducing new features
 
-We would &nbsp;<img width="15" alt="Love" src="https://github.com/surrealdb/surrealdb/blob/main/img/love.svg?raw=true">&nbsp; for you to contribute to SurrealDB, but we would also like to make sure SurrealDB is as great as possible and loyal to its vision and mission statement. For us to find the right balance, please open a question on [GitHub discussions](https://github.com/surrealdb/surrealdb/discussions) with any ideas before creating a [**GitHub Issue**](/issues). This will allow the SurrealDB community to have sufficient discussion about the new feature value and how it fits in the product roadmap and vision, before introducing a new pull request
+We would &nbsp;<img width="15" alt="Love" src="https://github.com/geekendev/surrealdb/blob/main/img/love.svg?raw=true">&nbsp; for you to contribute to SurrealDB, but we would also like to make sure SurrealDB is as great as possible and loyal to its vision and mission statement. For us to find the right balance, please open a question on [GitHub discussions](https://github.com/geekendev/surrealdb/discussions) with any ideas before creating a [**GitHub Issue**](/issues). This will allow the SurrealDB community to have sufficient discussion about the new feature value and how it fits in the product roadmap and vision, before introducing a new pull request
 
-This is also important for the SurrealDB lead developers to be able to give technical input and different emphasis regarding the feature design and architecture. Some bigger features might need to go through our [RFC process](https://github.com/surrealdb/rfcs).
+This is also important for the SurrealDB lead developers to be able to give technical input and different emphasis regarding the feature design and architecture. Some bigger features might need to go through our [RFC process](https://github.com/geekendev/rfcs).
 
 ## Submitting a pull request
 
 The **branch name** is your first opportunity to give your task context.
-Branch naming convention is as follows 
+Branch naming convention is as follows
 
 `TYPE-ISSUE_ID-DESCRIPTION`
 
 It is recommended to combine the relevant [**GitHub Issue**](/issues) with a short description that describes the task resolved in this branch. If you don't have GitHub issue for your PR, then you may avoid the prefix, but keep in mind that more likely you have to create the issue first. For example:
+
 ```
 bugfix-548-ensure-queries-execute-sequentially
 ```
 
 Where `TYPE` can be one of the following:
 
-- **refactor** - code change that neither fixes a bug nor adds a feature
-- **feature** - code changes that add a new feature
-- **bugfix** - code changes that fix a bug
-- **docs** - documentation only changes
-- **ci** - changes related to CI system
+-   **refactor** - code change that neither fixes a bug nor adds a feature
+-   **feature** - code changes that add a new feature
+-   **bugfix** - code changes that fix a bug
+-   **docs** - documentation only changes
+-   **ci** - changes related to CI system
 
 ### Commit your changes
 
-- Write a descriptive **summary**: The first line of your commit message should be a concise summary of the changes you are making. It should be no more than 50 characters and should describe the change in a way that is easy to understand.
+-   Write a descriptive **summary**: The first line of your commit message should be a concise summary of the changes you are making. It should be no more than 50 characters and should describe the change in a way that is easy to understand.
 
-- Provide more **details** in the body: The body of the commit message should provide more details about the changes you are making. Explain the problem you are solving, the changes you are making, and the reasoning behind those changes.
+-   Provide more **details** in the body: The body of the commit message should provide more details about the changes you are making. Explain the problem you are solving, the changes you are making, and the reasoning behind those changes.
 
-- Use the **commit history** in your favour: Small and self-contained commits allow the reviewer to see exactly how you solved the problem. By reading the commit history of the PR, the reviewer can already understand what they'll be reviewing, even before seeing a single line of code.
+-   Use the **commit history** in your favour: Small and self-contained commits allow the reviewer to see exactly how you solved the problem. By reading the commit history of the PR, the reviewer can already understand what they'll be reviewing, even before seeing a single line of code.
 
 ### Create a pull request
 
-- The **title** of your pull request should be clear and descriptive. It should summarize the changes you are making in a concise manner.
+-   The **title** of your pull request should be clear and descriptive. It should summarize the changes you are making in a concise manner.
 
-- Provide a detailed **description** of the changes you are making. Explain the reasoning behind the changes, the problem it solves, and the impact it may have on the codebase. Keep in mind that a reviewer was not working on your task, so you should explain why you wrote the code the way you did.
+-   Provide a detailed **description** of the changes you are making. Explain the reasoning behind the changes, the problem it solves, and the impact it may have on the codebase. Keep in mind that a reviewer was not working on your task, so you should explain why you wrote the code the way you did.
 
-- Describe the scene and provide everything that will help to understand the background and a context for the reviewers by adding related GitHub issues to the description, and links to the related PRs, projects or third-party documentation. If there are any potential drawbacks or trade-offs to your changes, be sure to mention them too.
+-   Describe the scene and provide everything that will help to understand the background and a context for the reviewers by adding related GitHub issues to the description, and links to the related PRs, projects or third-party documentation. If there are any potential drawbacks or trade-offs to your changes, be sure to mention them too.
 
-- Be sure to **request reviews** from the appropriate people. This might include the project maintainers, other contributors, or anyone else who is familiar with the codebase and can provide valuable feedback. You can also join our [Weekly Developer Office Hours](https://github.com/orgs/surrealdb/discussions/2118) to chat with the maintainers who will review your code! 
+-   Be sure to **request reviews** from the appropriate people. This might include the project maintainers, other contributors, or anyone else who is familiar with the codebase and can provide valuable feedback. You can also join our [Weekly Developer Office Hours](https://github.com/orgs/surrealdb/discussions/2118) to chat with the maintainers who will review your code!
 
 ### Getting a better review
 
-- [**Draft pull requests**](https://github.blog/2019-02-14-introducing-draft-pull-requests/) allow you to create a pull request that is still a work in progress and not ready for review. This is useful when you want to share your changes with others but aren't quite ready to merge them or request immediate feedback.    
-https://github.blog/2019-02-14-introducing-draft-pull-requests/
+-   [**Draft pull requests**](https://github.blog/2019-02-14-introducing-draft-pull-requests/) allow you to create a pull request that is still a work in progress and not ready for review. This is useful when you want to share your changes with others but aren't quite ready to merge them or request immediate feedback.  
+    https://github.blog/2019-02-14-introducing-draft-pull-requests/
 
-- Once your pull request has been reviewed, be sure to **respond** to any feedback you receive. This might involve making additional changes to your code, addressing questions or concerns, or simply thanking reviewers for their feedback.  
+-   Once your pull request has been reviewed, be sure to **respond** to any feedback you receive. This might involve making additional changes to your code, addressing questions or concerns, or simply thanking reviewers for their feedback.
 
-- By using the [**re-request review** feature](https://github.blog/changelog/2019-02-21-re-request-review-on-a-pull-request/), you can prompt the reviewer to take another look at your changes and provide feedback if necessary.  
+-   By using the [**re-request review** feature](https://github.blog/changelog/2019-02-21-re-request-review-on-a-pull-request/), you can prompt the reviewer to take another look at your changes and provide feedback if necessary.
 
-- The [**CODEOWNERS** file](https://github.com/surrealdb/surrealdb/blob/main/.github/CODEOWNERS) in GitHub allows you to specify who is responsible for code in a specific part of your repository. You can use this file to automatically assign pull requests to the appropriate people or teams and to ensure that the right people are notified when changes are made to certain files or directories.  
+-   The [**CODEOWNERS** file](https://github.com/geekendev/surrealdb/blob/main/.github/CODEOWNERS) in GitHub allows you to specify who is responsible for code in a specific part of your repository. You can use this file to automatically assign pull requests to the appropriate people or teams and to ensure that the right people are notified when changes are made to certain files or directories.
 
 <!--
 **[OPTIONAL - can be removed]** We use [**scheduled reminders** to Slack](https://docs.github.com/en/organizations/organizing-members-into-teams/managing-scheduled-reminders-for-your-team) for abandoned pull requests to will receive reminders to the team's channel for PRs that are non-draft and have no activity for a couple of days.
@@ -111,16 +112,16 @@ https://github.blog/2019-02-14-introducing-draft-pull-requests/
 
 ### Finalize the change
 
-- We are actively using **threads** to allow for more detailed and targeted discussions about specific parts of the pull request. A resolved thread means that the conversation has been addressed and the issue has been resolved. Reviewers are responsible for resolving the comment and not the author. The author can simply add a reply comment that the change has been done or decline a request.
+-   We are actively using **threads** to allow for more detailed and targeted discussions about specific parts of the pull request. A resolved thread means that the conversation has been addressed and the issue has been resolved. Reviewers are responsible for resolving the comment and not the author. The author can simply add a reply comment that the change has been done or decline a request.
 
-- When your pull request is approved, our team will be sure to **merge it responsibly**. This might involve running additional tests or checks, ensuring that the codebase is still functional.
+-   When your pull request is approved, our team will be sure to **merge it responsibly**. This might involve running additional tests or checks, ensuring that the codebase is still functional.
 
 ### Summary
 
 To summarize, fork the project and use the `git clone` command to download the repository to your computer. A standard procedure for working on an issue would be to:
 
 1. Clone the repository and download it to your computer.
- 
+
 2. Pull all changes from the upstream `main` branch, before creating a new branch - to ensure that your `main` branch is up-to-date with the latest changes.
 
 3. Create a new branch from `main` like: `bugfix-548-ensure-queries-execute-sequentially`.
@@ -145,14 +146,14 @@ SurrealDB is designed to be fast and to scale. It is built to work in both a sin
 
 When contributing code to the database or the Client SDKs, please take into account the following considerations:
 
-- SurrealDB startup time
-- Query execution time
-- Query response times
-- Query throughput
-- Requests per second
-- Websocket connections
-- Network usage
-- Memory usage
+-   SurrealDB startup time
+-   Query execution time
+-   Query response times
+-   Query throughput
+-   Requests per second
+-   Websocket connections
+-   Network usage
+-   Memory usage
 
 ## Security and Privacy
 
@@ -172,7 +173,7 @@ Pull requests are great, but there are many other areas where you can help.
 
 ### Blogging and speaking
 
-Blogging, speaking about, or creating tutorials about one of SurrealDB's many features. Mention [@surrealdb](https://twitter.com/surrealdb) on Twitter, and email community@surrealdb.com so we can give pointers and tips and help you spread the word by promoting your content on the different SurrealDB communication channels. Please add your blog posts and videos of talks to our [showcase](https://github.com/surrealdb/showcase) repo on GitHub.
+Blogging, speaking about, or creating tutorials about one of SurrealDB's many features. Mention [@surrealdb](https://twitter.com/surrealdb) on Twitter, and email community@surrealdb.com so we can give pointers and tips and help you spread the word by promoting your content on the different SurrealDB communication channels. Please add your blog posts and videos of talks to our [showcase](https://github.com/geekendev/showcase) repo on GitHub.
 
 ### Presenting at meetups
 
@@ -180,7 +181,7 @@ Presenting at meetups and conferences about your SurrealDB projects. Your unique
 
 ### Feedback, bugs, and ideas
 
-Sending feedback is a great way for us to understand your different use cases of SurrealDB better. If you want to share your experience with SurrealDB, or if you want to discuss any ideas, you can start a discussion on [GitHub discussions](https://github.com/surrealdb/surrealdb/discussions), chat with the [SurrealDB team on Discord](https://surrealdb.com/discord), or you can tweet [@tobiemh](https://twitter.com/tobiemh) or [@surrealdb](https://twitter.com/surrealdb) on Twitter. If you have any issues or have found a bug, then feel free to create an issue on [**GitHub Issue**](/issues).
+Sending feedback is a great way for us to understand your different use cases of SurrealDB better. If you want to share your experience with SurrealDB, or if you want to discuss any ideas, you can start a discussion on [GitHub discussions](https://github.com/geekendev/surrealdb/discussions), chat with the [SurrealDB team on Discord](https://surrealdb.com/discord), or you can tweet [@tobiemh](https://twitter.com/tobiemh) or [@surrealdb](https://twitter.com/surrealdb) on Twitter. If you have any issues or have found a bug, then feel free to create an issue on [**GitHub Issue**](/issues).
 
 ### Documentation improvements
 
@@ -190,11 +191,11 @@ Submitting [documentation](https://surrealdb.com/docs) updates, enhancements, de
 
 Join the growing [SurrealDB Community](https://surrealdb.com/community) around the world, for help, ideas, and discussions regarding SurrealDB.
 
-- View our official [Blog](https://surrealdb.com/blog)
-- Follow us on [Twitter](https://twitter.com/surrealdb)
-- Connect with us on [LinkedIn](https://www.linkedin.com/company/surrealdb/)
-- Join our [Dev community](https://dev.to/surrealdb)
-- Chat live with us on [Discord](https://discord.gg/surrealdb)
-- Get involved on [Reddit](http://reddit.com/r/surrealdb/)
-- Read our blog posts on [Medium](https://medium.com/surrealdb)
-- Questions tagged #surrealdb on [StackOverflow](https://stackoverflow.com/questions/tagged/surrealdb)
+-   View our official [Blog](https://surrealdb.com/blog)
+-   Follow us on [Twitter](https://twitter.com/surrealdb)
+-   Connect with us on [LinkedIn](https://www.linkedin.com/company/surrealdb/)
+-   Join our [Dev community](https://dev.to/surrealdb)
+-   Chat live with us on [Discord](https://discord.gg/surrealdb)
+-   Get involved on [Reddit](http://reddit.com/r/surrealdb/)
+-   Read our blog posts on [Medium](https://medium.com/surrealdb)
+-   Questions tagged #surrealdb on [StackOverflow](https://stackoverflow.com/questions/tagged/surrealdb)

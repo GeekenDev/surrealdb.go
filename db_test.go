@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/geekendev/surrealdb.go/pkg/logger/slog"
+	"github.com/geekendev/surrealdb.go/pkg/model"
 	"github.com/stretchr/testify/assert"
-	"github.com/surrealdb/surrealdb.go/pkg/logger/slog"
-	"github.com/surrealdb/surrealdb.go/pkg/model"
 
 	"github.com/geekendev/surrealdb.go"
 	"github.com/geekendev/surrealdb.go/pkg/conn/gorilla"
